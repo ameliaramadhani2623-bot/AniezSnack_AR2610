@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Aniez Snack — Cemilan Rumahan, Rasa Juara</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥨</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
+
+<!-- Library eksternal -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
+
+<!-- Konfigurasi tema Tailwind (dipisah ke file sendiri) -->
+<script src="tailwind-config.js"></script>
+
+<!-- CSS kustom (dipisah dari HTML) -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased">
+<div id="app"></div>
+<div id="modal-root"></div>
+<div id="toast-container" class="fixed bottom-4 right-4 z-[100] flex flex-col gap-2 items-end no-print"></div>
+
+<!-- Logika aplikasi (dipisah dari HTML) -->
+<script src="app.js"></script>
+</body>
+</html>

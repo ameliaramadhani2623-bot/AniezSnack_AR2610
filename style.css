@@ -1,0 +1,58 @@
+html { scroll-behavior: smooth; }
+  html, body { max-width:100%; overflow-x:hidden; }
+  body { font-family:'Plus Jakarta Sans',sans-serif; background:#FBF8F3; color:#241F1B; }
+  /* Cegah auto-zoom Safari/iOS saat fokus ke input di layar kecil */
+  @media (max-width: 640px){
+    input, select, textarea { font-size:16px !important; }
+  }
+  /* Ruang aman untuk notch/gesture-bar di HP modern pada nav bawah */
+  nav.fixed.bottom-0{ padding-bottom: calc(0.5rem + env(safe-area-inset-bottom)); }
+  .wave-divider{ display:block; width:100%; line-height:0; }
+  .icon-badge{ width:56px; height:56px; border-radius:9999px; background:#C2272D; display:flex; align-items:center; justify-content:center; color:#fff; font-size:26px; flex-shrink:0; }
+  h1,h2,h3,h4,.font-display { font-family:'Baloo 2',sans-serif; }
+  ::-webkit-scrollbar{ width:10px; height:10px; }
+  ::-webkit-scrollbar-track{ background:#F1E4C8; }
+  ::-webkit-scrollbar-thumb{ background:#C1440E; border-radius:8px; }
+  :focus-visible{ outline:3px solid #E8A33D; outline-offset:2px; border-radius:4px; }
+
+  /* torn / zigzag paper edge divider, signature motif */
+  .torn-edge{
+    height:22px; width:100%;
+    background: linear-gradient(-45deg, #FBF6EA 8px, transparent 0), linear-gradient(45deg, #FBF6EA 8px, transparent 0);
+    background-size: 16px 22px;
+    background-repeat: repeat-x;
+  }
+  .torn-edge-up{
+    height:22px; width:100%;
+    background: linear-gradient(135deg, #FBF6EA 8px, transparent 0), linear-gradient(-135deg, #FBF6EA 8px, transparent 0);
+    background-size: 16px 22px; background-repeat: repeat-x; transform: rotate(180deg);
+  }
+  /* stamp badge like a snack-pack sticker */
+  .stamp{
+    font-family:'Baloo 2',sans-serif; font-weight:700; letter-spacing:.03em;
+    border:2px dashed rgba(255,255,255,.75); transform: rotate(-6deg);
+    box-shadow: 0 3px 0 rgba(0,0,0,.15);
+  }
+  .card-hover{ transition: transform .18s ease, box-shadow .18s ease; }
+  .card-hover:hover{ transform: translateY(-4px); box-shadow: 0 14px 30px -12px rgba(59,42,32,.35); }
+  .tab-active{ border-bottom:3px solid #C1440E; color:#C1440E; font-weight:700; }
+  .modal-backdrop{ background:rgba(59,42,32,.55); backdrop-filter: blur(2px); }
+  .toast{ animation: toastIn .25s ease-out, toastOut .3s ease-in 2.7s forwards; }
+  @keyframes toastIn{ from{opacity:0; transform:translateY(10px)} to{opacity:1; transform:translateY(0)} }
+  @keyframes toastOut{ to{opacity:0; transform:translateY(-8px)} }
+  @media (prefers-reduced-motion: reduce){ .toast{animation:none} html{scroll-behavior:auto} }
+  input[type=file]::file-selector-button{ font-family:'Plus Jakarta Sans'; background:#C1440E; color:#fff; border:none; padding:.5rem 1rem; border-radius:.5rem; margin-right:.75rem; cursor:pointer; }
+  @media print {
+    .no-print{ display:none !important; }
+    body{ background:#fff; }
+  }
+  /* Admin dark mode override */
+  html.admin-dark .admin-root{ background:#15120e; }
+  html.admin-dark .admin-root .bg-card{ background:#241f1b !important; }
+  html.admin-dark .admin-root .bg-\[\#FBF6EA\]{ background:#15120e !important; }
+  html.admin-dark .admin-root .text-coffee{ color:#F5EAD2 !important; }
+  html.admin-dark .admin-root .text-coffee-light{ color:#C9BBA6 !important; }
+  html.admin-dark .admin-root input, html.admin-dark .admin-root select, html.admin-dark .admin-root textarea{ background:#2E2822; color:#F5EAD2; border-color:#4A4038 !important; }
+  html.admin-dark .admin-root table thead tr{ background:#2E2822 !important; color:#F5EAD2; }
+  html.admin-dark .admin-root tr.border-b, html.admin-dark .admin-root .border-paper, html.admin-dark .admin-root .border-paper-dark{ border-color:#3A332C !important; }
+  html.admin-dark .admin-root .bg-paper{ background:#2E2822 !important; }
